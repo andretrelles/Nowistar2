@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use Bootstrap Sass
 gem 'bootstrap-sass', '~> 3.3.4'
 
+#Elastic search
+gem 'searchkick'
+
 # User jQuery Turbolinks so that jQuery works on first page load
 gem 'jquery-turbolinks'
 
@@ -53,12 +56,12 @@ gem 'geocoder'
 gem 'faker', git: "https://github.com/stympy/faker.git"
 
 #Use OmniAuth for authentication of LinkedIn
-gem 'omniauth'	
+gem 'omniauth'
 gem 'omniauth-linkedin'
 gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-facebook'
 
-# Stripe API gem to add charge ability 
+# Stripe API gem to add charge ability
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Pagination Gem to add pagination for results
@@ -96,4 +99,3 @@ group :development, :test do
 
 
 end
-

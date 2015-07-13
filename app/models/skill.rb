@@ -1,4 +1,5 @@
 class Skill < ActiveRecord::Base
+	searchkick
 	require "json"
 	belongs_to :user
 	belongs_to :subcategory
