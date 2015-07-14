@@ -5,6 +5,7 @@
 //= require turbolinks
 //= require jquery.raty
 //= require ratyrate
+//= require calendar.lib
 //= require_tree .
 
 // The init function needs to run on load
@@ -22,7 +23,7 @@ function initialize_my_map() {
 
 
     // Get the page's marker data from the JSON API
-    var url = window.location.origin + window.location.pathname + ".json" + window.location.search 
+    var url = window.location.origin + window.location.pathname + ".json" + window.location.search
     console.log (window.location.origin)
     console.log (window.location.pathname)
     // Ajax the data URL (this retrieves the contents of that JSON url above)
@@ -31,7 +32,7 @@ function initialize_my_map() {
     	console.log("Data returned from " + url, results)
 
         // Wrap the data in an array if it's not one already
-        if(!(results instanceof Array)) results = [results] 
+        if(!(results instanceof Array)) results = [results]
 
     	// Create a map
         var mapProps = {
@@ -46,20 +47,20 @@ function initialize_my_map() {
         var bounds = new google.maps.LatLngBounds()
 		var infowindow = new google.maps.InfoWindow({
         });
-        
+
 
 		var markers = []
-        
-                
+
+
 		for (i = 0; i < results.length; i++) {
 			var markerPosition = new google.maps.LatLng(results[i].latitude, results[i].longitude)
             var marker = new google.maps.Marker({
                     position: markerPosition,
                     animation: google.maps.Animation.DROP
-                
+
                 	})
             marker.content = '<h5>' + results[i].title + '</h5><hr><h3>$' + results[i].price + '</h3><h6>' + results[i].address + '</h6>' +
-            '<h6>' + results[i].city + ',' + results[i].state + ' ' + results[i].zipcode + '</h6>';  
+            '<h6>' + results[i].city + ',' + results[i].state + ' ' + results[i].zipcode + '</h6>';
 			marker.setMap(map)
 			bounds.extend(markerPosition);
 			map.fitBounds(bounds);
@@ -74,6 +75,3 @@ function initialize_my_map() {
         var markerCluster = new MarkerClusterer(map, markers, { zoomOnClick: true, maxZoom: 16, gridSize: 10 })
     })
 }
-
-
-    
