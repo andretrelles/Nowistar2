@@ -4,12 +4,12 @@
 			<tr>
 				<th class="col-md-2">User</th>
 				<th class="col-md-5">Service</th>
-				<th class="col-md-1">Subcategory</th>
+				<th class="col-md-1">Zip Code</th>
 				<th class="col-md-1">Price</th>
 			</tr>
 		</thead>
 		<tbody>
-			<% @skills.each do |skill| %> 
+			<% @skills.each do |skill| %>
 				<tr>
 					<td class="searchrow col-md-1">
 						<a href= <%=user_path(skill.user)%>>
@@ -27,7 +27,7 @@
 
 					<td class="searchrow col-md-1">
 						<a href= <%=user_skill_path(skill.user, skill.id)%>>
-								<%=skill.subcategory.name %>
+							<%=skill.zipcode %>
 						</a>
 					</td>
 
@@ -37,17 +37,6 @@
 						</a>
 					</td>
 
-					<td class="searchrow col-md-1">
-						<a href= <%=user_skill_path(skill.user, skill.id)%>>
-							<%=skill.zipcode %>
-						</a>
-					</td>
-
-					<td class="searchrow col-md-1">
-						<a class="btn btn-default" href= <%=user_skill_path(skill.user, skill.id)%> role="button">
-							Book Now
-						</a>
-					</td>
 				</tr>
 			<% end %>
 		</tbody>
