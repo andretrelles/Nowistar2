@@ -2,16 +2,15 @@
 	<table class="table table-bordered table-hover spacing-table">
 		<thead>
 			<tr>
-				<th class="col-md-1 table1"><%= sortable "user", "User" %></th>
-				<th class="col-md-4 table1"><%= sortable "title", "Service" %></th>
-				<th class="col-md-1 table1"><%= sortable "subcategory_id", "Subcategory" %></th>
-				<th class="col-md-1 table1"><%= sortable "price", "Price" %></th>
+				<th class="col-md-2 table1"><%= sortable "user", "User" %></th>
+				<th class="col-md-5 table1"><%= sortable "title", "Service" %></th>
 				<th class="col-md-1 table1"><%= sortable "zipcode", "Zipcode" %></th>
-				<th class="col-md-1 table1">Book</th>
+				<th class="col-md-1 table1"><%= sortable "price", "Price" %></th>
+
 			</tr>
 		</thead>
 		<tbody>
-			<% @skills.each do |skill| %> 
+			<% @skills.each do |skill| %>
 				<tr>
 					<td class="searchrow col-md-1">
 						<a href= <%=user_path(skill.user)%>>
@@ -29,25 +28,13 @@
 
 					<td class="searchrow col-md-1">
 						<a href= <%=user_skill_path(skill.user, skill.id)%>>
-								<%=skill.subcategory.name %>
+							<%=skill.zipcode %>
 						</a>
 					</td>
 
 					<td class="searchrow col-md-1">
 						<a href= <%=user_skill_path(skill.user, skill.id)%>>
 								<%= number_to_currency(skill.price) %>
-						</a>
-					</td>
-
-					<td class="searchrow col-md-1">
-						<a href= <%=user_skill_path(skill.user, skill.id)%>>
-							<%=skill.zipcode %>
-						</a>
-					</td>
-
-					<td class="searchrow col-md-1">
-						<a class="btn btn-default" href= <%=user_skill_path(skill.user, skill.id)%> role="button">
-							Book Now
 						</a>
 					</td>
 
