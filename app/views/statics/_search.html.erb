@@ -13,14 +13,17 @@
         			<li class="dropdown-submenu">
         				<a class="category" tabindex="-1" type="category" value=<%= category.id  %> ><%= category.name %></a>
        				  <ul class="dropdown-menu">
-       				  	<% category.subcategories.each do |subcategory| %>	
-            					<li><a class="subcategory" tabindex="-1" type="subcategory" value=<%= subcategory.id %> ><%= subcategory.name %></a></li>  				
+       				  	<% category.subcategories.each do |subcategory| %>
+            					<li><a class="subcategory" tabindex="-1" type="subcategory" value=<%= subcategory.id %> ><%= subcategory.name %></a></li>
               		<% end %>
               	</ul>
               </li>
-         	<% end %> 
-         </ul>			
+         	<% end %>
+         </ul>
   		</div>
+      <div class = "col-md-2 searchform">
+        <%= text_field_tag :date, nil, placeholder: 'When?', class:"datetimepicker" %>
+      </div>
   		<div class ="col-md-2 searchform">
   			<%= text_field_tag :location, nil, placeholder: 'Where?',class: 'form-control' %>
   		</div>
@@ -30,3 +33,6 @@
   	<% end %>
   </div>
 
+  <script type="text/javascript">
+    $('.datetimepicker').datetimepicker();
+  </script>

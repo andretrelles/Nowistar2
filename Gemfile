@@ -43,6 +43,9 @@ gem 'pg'
 #Datepicker
 gem 'bootstrap-datepicker-rails'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-datetimepicker'
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

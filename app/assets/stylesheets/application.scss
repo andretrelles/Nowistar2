@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require datetimepicker
  *= require_self
  *= require_tree .
 
@@ -32,9 +33,9 @@ BODY {
 
 
 
-.thesearch {  height:auto; 
-    margin:0 auto; 
-    width:60%; 
+.thesearch {  height:auto;
+    margin:0 auto;
+    width:60%;
 }
 .carousel_slide {
     margin: 0 auto;
@@ -75,7 +76,7 @@ a.skillsbtn {
 .profpic {
     width: 250px;
     height: 250px;
-    font-size: 30px; 
+    font-size: 30px;
 }
 .form {
     text-align: center;
@@ -84,8 +85,8 @@ a.skillsbtn {
     border-radius: 3px;
 }
 .formtext {
-    font-size: 25px; 
+    font-size: 25px;
 }
-.greeting { 
-    font-size: 50px; 
+.greeting {
+    font-size: 50px;
 }

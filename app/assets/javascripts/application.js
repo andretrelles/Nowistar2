@@ -1,5 +1,7 @@
 //= require jquery
 //= require bootstrap-sprockets
+//= require datetimepicker
+
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require turbolinks
