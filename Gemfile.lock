@@ -318,6 +318,7 @@ DEPENDENCIES
   omniauth-linkedin-oauth2
   paperclip
   pg
+  pry
   pry-byebug
   pry-rails
   pry-stack_explorer
@@ -334,3 +335,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   will_paginate
+
+BUNDLED WITH
+   1.14.6

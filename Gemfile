@@ -79,6 +79,8 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+gem 'pry'
+
 group :development, :test do
   # Call 'binding 'pry' ' anywhere in the code to stop execution and get a debugger console. Be
   # Sure to include 'require pry' .
